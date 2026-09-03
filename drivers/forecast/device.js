@@ -670,7 +670,7 @@ class ForecastDevice extends Homey.Device
         this.setSettings( { placeID: placeID, oldStationID: settings.stationID } ).catch( this.error );
 
         let langCode = this.homey.__( "langCode" );
-        let url = "https://api.weather.com/v3/wx/forecast/daily/5day?placeid=" + placeID + "&units=m&language=" + langCode + "&format=json&apiKey=" + settings.apiKey;
+        let url = "https://api.weather.com/v3/wx/forecast/daily/5day?placeid=" + placeID + "&units=e&language=" + langCode + "&format=json&apiKey=" + settings.apiKey;
         return await this.homey.app.GetURL( url );
     }
 

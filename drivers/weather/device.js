@@ -340,7 +340,7 @@ class WeatherDevice extends Homey.Device
     async getWeather()
     {
         let settings = this.getSettings();
-        let url = "https://api.weather.com/v2/pws/observations/current?numericPrecision=decimal&stationId=" + settings.stationID + "&format=json&units=m&apiKey=" + settings.apiKey;
+        let url = "https://api.weather.com/v2/pws/observations/current?numericPrecision=decimal&stationId=" + settings.stationID + "&format=json&units=e&apiKey=" + settings.apiKey;
         return await this.homey.app.GetURL( url );
     }
 
